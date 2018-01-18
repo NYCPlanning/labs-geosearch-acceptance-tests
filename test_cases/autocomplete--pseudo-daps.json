@@ -92,6 +92,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "7",
+      "status": "pass",
+      "in": {
+        "description": "should return East and West 125 (see test 8)",
+        "text": "300 125th st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "300 EAST  125 STREET, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "status": "pass",
+      "in": {
+        "description": "should return East and West 125 (see test 7)",
+        "text": "300 125th st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "300 WEST  125 STREET, Manhattan, New York, NY, USA",
+          }
+        ]
+      }
     }
   ]
 }
