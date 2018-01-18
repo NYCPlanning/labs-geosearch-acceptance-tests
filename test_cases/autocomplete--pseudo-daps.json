@@ -1,0 +1,97 @@
+{
+  "name": "pseudo DAPS",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 2)",
+        "text": "34 7 ave queens"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "34 7 AVENUE MALBA, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 1)",
+        "text": "34 7 ave queens"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "34 7 AVENUE ROCKAWAYS, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 4)",
+        "text": "30 8 ave queens"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "30 8 AVENUE MALBA, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 3)",
+        "text": "30 8 ave queens"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "30 8 AVENUE ROCKAWAYS, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 6)",
+        "text": "239-02 hillside ave"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "239-02 HILLSIDE AVENUE BELLEROSE, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "status": "pass",
+      "in": {
+        "description": "should return two addresses in Queens (see test 5)",
+        "text": "239-02 hillside ave"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "239-02 HILLSIDE AVENUE DOUGLASTON, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    }
+  ]
+}
