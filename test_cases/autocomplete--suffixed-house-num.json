@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete",
+  "name": "autocomplete - suffixed house number",
   "notes": "https://github.com/pelias/schema/issues/105",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
@@ -8,12 +8,13 @@
       "id": "1",
       "status": "pass",
       "in": {
-        "text": "120 broadway"
+        "text": "120 1/2 first ave"
       },
       "expected": {
         "properties": [
           {
-            "label": "120 BROADWAY, Manhattan, New York, NY, USA"
+            "name": "120 1/2 FIRST AVENUE",
+            "label": "120 1/2 FIRST AVENUE, Manhattan, New York, NY, USA"
           }
         ]
       }
@@ -21,14 +22,13 @@
     {
       "id": "2",
       "status": "pass",
-      "user": "andycochran",
       "in": {
-        "text": "1 world trade center"
+        "text": "240-55 1/3 depew ave"
       },
       "expected": {
         "properties": [
           {
-            "label": "1 WORLD TRADE CENTER, Manhattan, New York, NY, USA"
+            "name": "240-55 1/3 DEPEW AVENUE"
           }
         ]
       }
@@ -37,12 +37,12 @@
       "id": "3",
       "status": "pass",
       "in": {
-        "text": "statue of liberty"
+        "text": "519 front east 12 st"
       },
       "expected": {
         "properties": [
           {
-            "label": "STATUE OF LIBERTY, Manhattan, New York, NY, USA"
+            "name": "519 FRONT EAST 12 STREET"
           }
         ]
       }
