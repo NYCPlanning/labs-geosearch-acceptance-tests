@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete",
+  "name": "non-addressable place name",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
   "tests": [
@@ -7,12 +7,12 @@
       "id": "1",
       "status": "pass",
       "in": {
-        "text": "120 broadway"
+        "text": "rockaway community park"
       },
       "expected": {
         "properties": [
           {
-            "label": "120 BROADWAY, Manhattan, New York, NY, USA"
+            "name": "ROCKAWAY COMMUNITY PARK"
           }
         ]
       }
@@ -21,12 +21,12 @@
       "id": "2",
       "status": "pass",
       "in": {
-        "text": "1 world trade center"
+        "text": "statue of liberty"
       },
       "expected": {
         "properties": [
           {
-            "label": "1 WORLD TRADE CENTER, Manhattan, New York, NY, USA"
+            "label": "STATUE OF LIBERTY, Manhattan, New York, NY, USA"
           }
         ]
       }
