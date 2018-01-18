@@ -30,6 +30,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "3",
+      "status": "pass",
+      "in": {
+        "text": "metropolitan opera house"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "METROPOLITAN OPERA HOUSE, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "status": "pass",
+      "in": {
+        "text": "marcy houses"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "MARCY HOUSES, Brooklyn, New York, NY, USA"
+          }
+        ]
+      }
     }
   ]
 }
