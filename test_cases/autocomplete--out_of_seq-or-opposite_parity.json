@@ -1,0 +1,35 @@
+{
+  "name": "SAF-O: out-of-sequence or opposite-parity address",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "text": "86 new dorp plaza"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "86 NEW DORP PLAZA, Staten Island, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "text": "302 south street"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "302 SOUTH STREET, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    }
+  ]
+}
