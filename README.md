@@ -3,6 +3,8 @@
 This repository contains all of the NYC Geosearch API acceptance tests, which are automated tests used to identify
 improvements and regressions between various versions of the API and the underlying data.
 
+[More about Geosearch](https://github.com/NYCPlanning/labs-geosearch-dockerfiles)
+
 ## Requirements
 
 - [Git](https://git-scm.com/)
