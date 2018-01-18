@@ -1,0 +1,12 @@
+{
+  "mapzen": {
+    "api_key": {
+      "search.mapzen.com": ""
+    }
+  },
+  "acceptance-tests": {
+    "endpoints": {
+      "prod": "http://geosearch.planninglabs.nyc/v1/"
+    }
+  }
+}

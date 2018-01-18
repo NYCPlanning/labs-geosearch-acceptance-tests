@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete stop words",
+  "name": "autocomplete",
   "notes": "https://github.com/pelias/schema/issues/105",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
@@ -7,15 +7,14 @@
     {
       "id": "1",
       "status": "pass",
-      "user": "missinglink",
-      "priorityThresh": 5,
+      "user": "andycochran",
       "in": {
-        "text": "world trade center"
+        "text": "120 broadway"
       },
       "expected": {
         "properties": [
           {
-            "name": "World Trade Center"
+            "label": "120 BROADWAY, Manhattan, New York, NY, USA"
           }
         ]
       }
@@ -23,15 +22,14 @@
     {
       "id": "2",
       "status": "pass",
-      "user": "missinglink",
-      "priorityThresh": 5,
+      "user": "andycochran",
       "in": {
-        "text": "242 hackney road"
+        "text": "1 world trade center"
       },
       "expected": {
         "properties": [
           {
-            "name": "242 Hackney Road"
+            "label": "1 WORLD TRADE CENTER, Manhattan, New York, NY, USA"
           }
         ]
       }
@@ -39,16 +37,14 @@
     {
       "id": "3",
       "status": "pass",
-      "user": "missinglink",
-      "description": [ "case of a query ending in a directional (west)" ],
-      "priorityThresh": 3,
+      "user": "andycochran",
       "in": {
-        "text": "moscone west"
+        "text": "statue of liberty"
       },
       "expected": {
         "properties": [
           {
-            "name": "Moscone Convention Center West"
+            "label": "STATUE OF LIBERTY, Manhattan, New York, NY, USA"
           }
         ]
       }
