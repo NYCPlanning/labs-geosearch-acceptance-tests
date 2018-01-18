@@ -1,0 +1,67 @@
+{
+  "name": "autocomplete - Marble Hill Community District: Bronx 8",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "SAF-A: Alt Address - SAF record same as LION record",
+        "text": "17 brighton 3 lane"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "17 BRIGHTON 3 LANE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "SAF-A: Alt Address - SAF record same as LION record",
+        "text": "381 malcolm x blvd"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "381 MALCOLM X BOULEVARD"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "SAF-B: Alt Address - SAF record and LION record differ",
+        "text": "179 delancy st south"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "179 DELANCEY STREET SOUTH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "SAF-B: Alt Address - SAF record and LION record differ",
+        "text": "6 ferry terminal dr"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "6 FERRY TERMINAL DRIVE"
+          }
+        ]
+      }
+    }
+  ]
+}

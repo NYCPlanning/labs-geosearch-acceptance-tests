@@ -4,9 +4,25 @@
   "priorityThresh": 5,
   "tests": [
     {
-      "id": "1",
+      "id": "2",
       "status": "pass",
       "in": {
+        "description": "SAF-C: Ruby Street on Brooklyn-Queens border",
+        "text": "156-10 75 st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "156-10 75 STREET"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "corresponding Ruby Street address",
         "text": "156-10 ruby st"
       },
       "expected": {
@@ -18,9 +34,25 @@
       }
     },
     {
-      "id": "2",
+      "id": "3",
       "status": "pass",
       "in": {
+        "description": "SAF-C: Ruby Street on Brooklyn-Queens border",
+        "text": "105-32 75 st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "105-32 75 STREET"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "status": "pass",
+      "in": {
+        "description": "corresponding Ruby Street address",
         "text": "105-32 ruby st"
       },
       "expected": {
