@@ -25,23 +25,6 @@ default to running all tests against production
 $ npm test
 ```
 
-specify an environment manually
-```bash
-$ npm test -- -e bigdev
-```
-
-specify an environment and only run tests that work against dev (small dataset of just NYC and London)
-
-```bash
-$ npm test -- -e dev -t dev
-```
-
-dump results from failing tests into json files, one per failing test
-
-```bash
-$ npm test -- -e dev -o json
-```
-
 ## Test Case Files
 
 For a full description of what can go in tests, see the
