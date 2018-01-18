@@ -1,0 +1,38 @@
+{
+  "name": "autocomplete - alternate addresses",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "SAF-V: Vanity address (entrance on E 51 ST)",
+        "text": "637 5 ave"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "637 5 AVENUE, Brooklyn, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "SAF-V: Vanity address (entrance on E 80 ST)",
+        "text": "990 5 ave"
+      },
+      "expected": {
+        "properties": [
+          {
+            "borough": "Manhattan",
+            "label": "990 5 AVENUE, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    }
+  ]
+}
