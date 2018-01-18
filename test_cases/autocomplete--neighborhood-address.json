@@ -1,0 +1,37 @@
+{
+  "name": "autocomplete",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "Edgewater Park (the Neighborhood) is an alternative street name",
+        "text": "30030 edgewater park"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "120 BROADWAY, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "Harding Park (the Neighborhood) is an alternative street name",
+        "text": "300 harding park"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "300 HARDING PARK CAMP, The Bronx, New York, NY, USA"
+          }
+        ]
+      }
+    }
+  ]
+}
