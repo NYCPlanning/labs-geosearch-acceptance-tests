@@ -1,0 +1,35 @@
+{
+  "name": "autocomplete - corresponding Ruby Street address",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "text": "156-10 ruby st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "156-10 RUBY STREET",
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "text": "105-32 ruby st"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "105-32 RUBY STREET",
+          }
+        ]
+      }
+    }
+  ]
+}

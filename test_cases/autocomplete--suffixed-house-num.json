@@ -1,6 +1,5 @@
 {
   "name": "autocomplete - suffixed house number",
-  "notes": "https://github.com/pelias/schema/issues/105",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
   "tests": [
