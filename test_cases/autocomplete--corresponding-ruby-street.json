@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete - corresponding Ruby Street address",
+  "name": "autocomplete - corresponding Ruby Street addresses",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
   "tests": [
