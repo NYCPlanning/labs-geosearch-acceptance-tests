@@ -45,6 +45,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "4",
+      "status": "pass",
+      "in": {
+        "text": "330A ft hamilton"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "330A FT HAMILTON, Brooklyn, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "status": "pass",
+      "in": {
+        "text": "700A metcalf ave"
+      },
+      "expected": {
+        "properties": [
+          {
+            "name": "700A METCALF AVENUE"
+          }
+        ]
+      }
     }
   ]
 }
