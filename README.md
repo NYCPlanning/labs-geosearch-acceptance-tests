@@ -19,10 +19,16 @@ improvements and regressions between various versions of the API and the underly
 
 ## Usage
 
-default to running all tests against production
+Default to running all tests against production:
 
 ```bash
 $ npm test
+```
+
+Save failing results as JSON files in `/failures/` (one per failing test):
+
+```bash
+$ npm test -- -o json
 ```
 
 ## Test Case Files
