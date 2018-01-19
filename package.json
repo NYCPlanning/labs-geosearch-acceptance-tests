@@ -13,12 +13,18 @@
   "main": "index.js",
   "scripts": {
     "config": "node -e \"console.log(JSON.stringify(require( 'pelias-config' ).generate(), null, 2))\"",
-    "test": "./node_modules/pelias-fuzzy-tester/bin/fuzzy-tester",
+    "test": "PELIAS_CONFIG=config.json ./node_modules/pelias-fuzzy-tester/bin/fuzzy-tester",
     "lint": "jshint .",
+    "push": "node ./push-json.js",
+    "start": "npm test -- -o json || npm run push",
     "validate": "npm ls"
   },
   "dependencies": {
-    "pelias-fuzzy-tester": "0.10.1"
+    "aws-sdk": "^2.184.0",
+    "dotenv": "^4.0.0",
+    "fs-extra": "^5.0.0",
+    "pelias-fuzzy-tester": "0.10.1",
+    "slack-webhook": "^1.0.0"
   },
   "devDependencies": {
     "jshint": "^2.9.4",
