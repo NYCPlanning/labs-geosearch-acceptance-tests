@@ -15,7 +15,6 @@ improvements and regressions between various versions of the API and the underly
 - Clone this repo: `git clone git@github.com:NYCPlanning/labs-geosearch-acceptance-tests.git`
 - Navigate to the project directory: `cd labs-geosearch-acceptance-tests`
 - Install Dependencies: `npm install`
-- Set the environment variable `PELIAS_CONFIG` to the path at which the file can be found: `export PELIAS_CONFIG=config.json`
 
 ## Usage
 
