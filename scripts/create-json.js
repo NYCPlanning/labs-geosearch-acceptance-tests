@@ -23,6 +23,10 @@ const outputObject = {
 };
 
 array.forEach((address, i) => {
+  if (address.length === 0) {
+    return;
+  }
+
   const test = {
     id: i.toString(),
     status: 'pass',

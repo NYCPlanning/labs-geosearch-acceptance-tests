@@ -59516,20 +59516,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "4251",
-      "status": "pass",
-      "in": {
-        "text": ""
-      },
-      "expected": {
-        "properties": [
-          {
-            "layer": "address"
-          }
-        ]
-      }
     }
   ]
 }
