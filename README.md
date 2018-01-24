@@ -30,7 +30,16 @@ Save failing results as JSON files in `/failures/` (one per failing test):
 $ npm test -- -o json
 ```
 
-## Test Case Files
+## Test Cases
 
 For a full description of what can go in tests, see the
 [pelias-fuzzy-tester](https://github.com/pelias/fuzzy-tester) documentation.
+
+**Test Creation Script**  
+To create an autocomplete test from a set of terms:
+
+- Create a source `.txt` file in `scripts/`
+- Each line of the source file should be a distinct test case string that's expected to pass against the autocomplete endpoint with a valid `layer: 'address'` property
+- Run `node scripts/create-json.js [filepath]` to generate the `.json` file
+- Edit the `name` parameter in the generated test file
+- Manually move the file into `test_cases/`

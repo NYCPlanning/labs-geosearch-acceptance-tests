@@ -5,3 +5,6 @@ errors-*.json
 failures
 .DS_Store
 .env
+
+scripts/*
+!scripts/create-json.js
