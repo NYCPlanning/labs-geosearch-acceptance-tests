@@ -15,7 +15,7 @@ const filepath = process.argv[2];
 
 var array = fs.readFileSync(filepath).toString().split('\n');
 
-var outputObject = {
+const outputObject = {
   name: '',
   endpoint: 'autocomplete',
   priorityThresh: 5,
@@ -43,4 +43,4 @@ array.forEach((address, i) => {
 
 const outputFilepath = filepath.replace('.txt', '.json');
 
-outputObject = fs.writeFileSync(outputFilepath, JSON.stringify(outputObject, null, 2));
+fs.writeFileSync(outputFilepath, JSON.stringify(outputObject, null, 2));
