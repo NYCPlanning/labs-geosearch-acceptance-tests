@@ -1,7 +1,7 @@
 {
   "name": "pseudo DAPS",
   "endpoint": "autocomplete",
-  "priorityThresh": 5,
+  "priorityThresh": 10,
   "tests": [
     {
       "id": "1",
@@ -103,7 +103,7 @@
       "expected": {
         "properties": [
           {
-            "label": "300 EAST  125 STREET, Manhattan, New York, NY, USA"
+            "label": "300 EAST 125 STREET, Manhattan, New York, NY, USA"
           }
         ]
       }
@@ -118,7 +118,7 @@
       "expected": {
         "properties": [
           {
-            "label": "300 WEST  125 STREET, Manhattan, New York, NY, USA"
+            "label": "300 WEST 125 STREET, Manhattan, New York, NY, USA"
           }
         ]
       }
