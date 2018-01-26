@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete",
+  "name": "neighborhood address",
   "endpoint": "autocomplete",
   "priorityThresh": 5,
   "tests": [
@@ -28,7 +28,7 @@
       "expected": {
         "properties": [
           {
-            "label": "300 HARDING PARK CAMP, The Bronx, New York, NY, USA"
+            "label": "300 HARDING PARK, Bronx, New York, NY, USA"
           }
         ]
       }
