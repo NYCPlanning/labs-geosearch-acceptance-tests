@@ -1,0 +1,97 @@
+{
+  "name": "rowType",
+  "endpoint": "autocomplete",
+  "priorityThresh": 5,
+  "tests": [
+    {
+      "id": "1",
+      "status": "pass",
+      "in": {
+        "description": "random sample of singleAddress rowType",
+        "text": "16031 23 AVENUE"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "16031 23 AVENUE, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "status": "pass",
+      "in": {
+        "description": "random sample of nonAddressable rowType",
+        "text": "BAYBRIDGE GREEN"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "BAYBRIDGE GREEN, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "status": "pass",
+      "in": {
+        "description": "random sample of numericType rowType",
+        "text": "1979 BROADWAY"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "1979 BROADWAY, Manhattan, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "status": "pass",
+      "in": {
+        "description": "random sample of hyphenNoSuffix rowType",
+        "text": "151-67 SPRINGFIELD BOULEVARD"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "151-67 SPRINGFIELD BOULEVARD, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "status": "pass",
+      "in": {
+        "description": "random sample of noHyphenSuffix rowType",
+        "text": "423N EAST 137 STREET"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "423N EAST 137 STREET, Bronx, New York, NY, USA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "status": "pass",
+      "in": {
+        "description": "random sample of hyphenSuffix rowType",
+        "text": "39-06A 201 STREET"
+      },
+      "expected": {
+        "properties": [
+          {
+            "label": "39-06A 201 STREET, Queens, New York, NY, USA"
+          }
+        ]
+      }
+    }
+  ]
+}
