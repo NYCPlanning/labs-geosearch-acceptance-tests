@@ -59,20 +59,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "5",
-      "status": "pass",
-      "in": {
-        "text": "700A metcalf ave"
-      },
-      "expected": {
-        "properties": [
-          {
-            "name": "700A METCALF AVENUE"
-          }
-        ]
-      }
     }
   ]
 }
