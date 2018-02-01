@@ -10,4 +10,4 @@ ADD . ${WORKDIR}
 RUN npm install
 
 # run tests
-RUN npm test
+CMD npm test
