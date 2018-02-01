@@ -28,16 +28,22 @@ require('fs').readdirSync(normalizedPath)
     failures.push(failure);
   });
 
-// fs.emptyDir('./tmp');
-// fs.writeFile('./tmp/failures.json', JSON.stringify(failures));
+var status = {
+  status: failures.length > 0 ? 'failed' : 'passed',
+  time: new Date(),
+  regressions: failures,
+};
+
 
 var params = {
-    Body: JSON.stringify(failures),
+    Body: JSON.stringify(status),
     Bucket: 'planninglabs',
-    Key: 'geosearch-acceptance-tests/failures.json',
+    Key: 'geosearch-acceptance-tests/status.json',
     ContentType: 'application/json',
     ACL: 'public-read',
 };
+
+
 
 s3.putObject(params, function(err) {
     if (err) {
