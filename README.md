@@ -29,6 +29,13 @@ Save failing results as JSON files in `/failures/` (one per failing test):
 ```bash
 $ npm test -- -o json
 ```
+Run tests and push a `status.json` file to DO spaces.
+
+```
+$ npm start
+```
+
+`npm start` should be run with a `ROWCOUNT` environment variable, the `ROWCOUNT` will be appended to the `status.json` created in `push-json.js`.
 
 ## Test Cases
 

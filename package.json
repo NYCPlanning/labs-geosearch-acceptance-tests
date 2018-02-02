@@ -16,15 +16,15 @@
     "test": "PELIAS_CONFIG=config.json ./node_modules/pelias-fuzzy-tester/bin/fuzzy-tester",
     "lint": "jshint .",
     "push": "node ./push-json.js",
-    "start": "npm test -- -o json || npm run push",
+    "start": "npm test -- -o json; npm run push",
     "validate": "npm ls"
   },
   "dependencies": {
     "aws-sdk": "^2.184.0",
     "dotenv": "^4.0.0",
     "fs-extra": "^5.0.0",
-    "pelias-fuzzy-tester": "0.10.1",
-    "slack-webhook": "^1.0.0"
+    "moment": "^2.20.1",
+    "pelias-fuzzy-tester": "0.10.1"
   },
   "devDependencies": {
     "jshint": "^2.9.4",

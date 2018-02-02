@@ -1,5 +1,5 @@
-var SlackWebhook = require('slack-webhook');
 var AWS = require('aws-sdk');
+var moment = require('moment');
 
 require('dotenv').config();
 
@@ -8,14 +8,6 @@ var s3 = new AWS.S3({
     endpoint: spacesEndpoint,
     accessKeyId: process.env.ACCESS_KEY_ID,
     secretAccessKey: process.env.SECRET_ACCESS_KEY,
-});
-
-var slack = new SlackWebhook(process.env.SLACK_WEBHOOK_URL, {
-  defaults: {
-    username: 'GeoSearch Import Bot',
-    channel: '#labs-geocoder-api',
-    icon_emoji: ':robot_face:'
-  }
 });
 
 var normalizedPath = require('path').join(__dirname, 'failures');
@@ -31,9 +23,11 @@ require('fs').readdirSync(normalizedPath)
 var status = {
   status: failures.length > 0 ? 'failed' : 'passed',
   time: new Date(),
+  rowCount: parseInt(process.env.ROWCOUNT) || null,
   regressions: failures,
 };
 
+console.log(status);
 
 var params = {
     Body: JSON.stringify(status),
@@ -43,13 +37,12 @@ var params = {
     ACL: 'public-read',
 };
 
-
-
 s3.putObject(params, function(err) {
-    if (err) {
-      console.log(err, err.stack);
-    } else {
-      var url = 'https://planninglabs.nyc3.digitaloceanspaces.com/geosearch-acceptance-tests/failures.json';
-      slack.send(`GeoSearch Tests Complete! <${url}|View JSON>`);
-    }
+  if (err) { console.log(err, err.stack); }
+});
+
+// add a timestamped status object for archival
+params.Key = `geosearch-acceptance-tests/status_${moment().toISOString()}.json`;
+s3.putObject(params, function(err) {
+  if (err) { console.log(err, err.stack); }
 });
