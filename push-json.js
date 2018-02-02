@@ -1,5 +1,6 @@
 var AWS = require('aws-sdk');
 var moment = require('moment');
+var fs = require('fs');
 
 require('dotenv').config();
 
@@ -14,11 +15,13 @@ var normalizedPath = require('path').join(__dirname, 'failures');
 
 var failures = [];
 
-require('fs').readdirSync(normalizedPath)
-  .forEach(function(file) {
-    var failure = require('./failures/' + file);
-    failures.push(failure);
-  });
+if (fs.existsSync(normalizedPath)) {
+    fs.readdirSync(normalizedPath)
+      .forEach(function(file) {
+        var failure = require('./failures/' + file);
+        failures.push(failure);
+      });
+}
 
 var status = {
   status: failures.length > 0 ? 'failed' : 'passed',
